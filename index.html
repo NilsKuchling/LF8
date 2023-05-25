@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LF8 - Komponentenbestand</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <!-- <link rel="stylesheet" href="semanticui.css"> -->
+  <!-- JavaScript-Code zum Öffnen und Schließen des Popups -->
+  <script>
+    function openComponentPopup() {
+      document.getElementById("Componentpopup").style.display = "block";
+    }
+
+    function closeComponentPopup() {
+      document.getElementById("Componentpopup").style.display = "none";
+    }
+
+    function openOrderPopup() {
+      document.getElementById("Orderpopup").style.display = "block";
+    }
+
+    function closeOrderPopup() {
+      document.getElementById("Orderpopup").style.display = "none";
+    }
+    // Funktion, die ausgeführt wird, wenn das Popup-Formular abgeschickt wird
+    function addComponent() {
+      // Lese die Werte aus den Eingabefeldern aus
+      var componentCategory = document.getElementById("component-category").value;
+      var componentName = document.getElementById("component-name").value;
+      var componentAvailability = document.getElementById("component-availability").value;
+
+      // Erstelle eine neue Zeile für die Tabelle
+      var table = document.getElementById("component-table");
+      var newRow = table.insertRow();
+
+      // Füge die Werte als Zellen zur neuen Zeile hinzu
+      var categoryCell = newRow.insertCell();
+      var nameCell = newRow.insertCell();
+      var availabilityCell = newRow.insertCell();
+      categoryCell.innerHTML = componentCategory;
+      nameCell.innerHTML = componentName;
+      availabilityCell.innerHTML = componentAvailability;
+
+      // Schließe das Popup-Fenster
+      closeComponentPopup();
+    }
+    function addOrder() {
+      // Lese die Werte aus den Eingabefeldern aus
+      var componentName = document.getElementById("component-category").value;
+      var componentDescription = document.getElementById("component-name").value;
+      var componentDescription = document.getElementById("component-availability").value;
+
+      // Erstelle eine neue Zeile für die Tabelle
+      var table = document.getElementById("component-table");
+      var newRow = table.insertRow();
+
+      // Füge die Werte als Zellen zur neuen Zeile hinzu
+      var categoryCell = newRow.insertCell();
+      var nameCell = newRow.insertCell();
+      var availabilityCell = newRow.insertCell();
+      categoryCell.innerHTML = componentCategory;
+      nameCell.innerHTML = componentName;
+      nameCell.innerHTML = componentDescription;
+
+      // Schließe das Popup-Fenster
+      closeOrderPopup();
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Navbar-Code -->
+  <div class="navbar">
+    <span class="navbar-title">
+      LF8 - Komponentenbestand
+    </span>
+    <a href="#">Startseite</a>
+    <a id="active" href="#">Lagerbestand</a>
+    <a href="#">Dienstleistungen</a>
+    <a href="#">Projekte</a>
+    <a href="#">Support</a>
+  </div>
+
+  <!-- Seiteninhalt -->
+  <div class="table-title">
+    <p>Verfügbare Komponenten</p>
+  </div>
+  <table id="component-table">
+    <thead>
+      <tr>
+        <th>Kategorie</th>
+        <th>Komponente</th>
+        <th>Verfügbarkeit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hardware</td>
+        <td>Intel i5</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>Hardware</td>
+        <td>Intel i7</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Hardware</td>
+        <td>Server</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Software</td>
+        <td>Microsoft Office</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Hardware</td>
+        <td>RTX 3080</td>
+        <td>20</td>
+      </tr>
+      <tr>
+        <td>Software</td>
+        <td>Photoshop</td>
+        <td>30</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Button zum Öffnen des Popups -->
+  <div id="addButton">
+    <button id="addComponent" onclick="openComponentPopup()">Komponenten hinzufügen</button>
+  </div>
+  <!-- Popup-Fenster -->
+  <div id="Componentpopup" style="display: none;">
+    <h2>Komponenten hinzufügen</h2>
+    <form id="popup-form">
+      <label for="component-category">Kategorie:</label>
+      <input type="text" id="component-category" name="component-category"><br><br>
+
+      <label for="component-name">Komponente:</label>
+      <input type="text" id="component-name" name="component-name"><br><br>
+
+      <label for="component-availability">Verfügbarkeit:</label>
+      <input type="number" id="component-availability" name="component-availability"></input><br><br>
+
+      <input type="submit" value="Hinzufügen">
+      <button onclick="closeComponentPopup()">Abbrechen</button>
+    </form>
+  </div>
+  <div class="table-title">
+    <p>Komponenten bestellen</p>
+  </div>
+  <table id="order-table">
+    <thead>
+      <tr>
+        <th>Kategorie</th>
+        <th>Art der Komponente</th>
+        <th>Zulieferer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hardware</td>
+        <td>Prozessor</td>
+        <td>Prozessor GmbH</td>
+      </tr>
+      <tr>
+        <td>Software</td>
+        <td>Microsoft Office</td>
+        <td>Microsoft</td>
+      </tr>
+      <tr>
+        <td>Hardware</td>
+        <td>Server</td>
+        <td>Server GmbH</td>
+      </tr>
+      <tr>
+        <td>Hardware</td>
+        <td>Grafikkarte</td>
+        <td>Nvidia</td>
+      </tr>
+      <tr>
+        <td>Software</td>
+        <td>Photoshop</td>
+        <td>Adobe</td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="orderButton">
+    <button id="addOrder" onclick="openOrderPopup()">Komponenten bestellen</button>
+  </div>
+  <div id="Orderpopup" style="display: none;">
+    <h2>Komponenten bestellen</h2>
+    <form id="popup-form">
+      <label for="component-category">Kategorie:</label>
+      <select name="options">
+        <option value="hardware">Hardware</option>
+        <option value="software">Software</option>
+      </select><br><br>
+
+      <label for="component-name">Komponente:</label>
+      <input type="text" id="component-name" name="component-name"><br><br>
+
+      <label for="component-amount">Anzahl:</label>
+      <input type="number" id="component-amount" name="component-amount"></input><br><br>
+
+      <label for="component-supplier">Zulieferer:</label>
+      <select name="options">
+        <option value="" disabled selected>Auswählen</option>
+        <option value="option1">Prozessor GmbH</option>
+        <option value="option2">Server GmbH</option>
+        <option value="option3">Microsoft</option>
+        <option value="option4">Nvidia</option>
+        <option value="option5">Adobe</option>
+      </select><br><br>
+
+      <input type="submit" value="Bestellen">
+      <button onclick="closeOrderPopup()">Abbrechen</button>
+    </form>
+  </div>
+</body>
+
+</html>

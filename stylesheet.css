@@ -1,0 +1,249 @@
+@import"https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin";
+
+/* Style für die Navbar */
+html {
+  font-family: 'Lato';
+  font-weight: 400;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  padding: 2rem;
+}
+
+body {
+  margin: 0
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  background-color: #fff;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.table-title {
+  display: flex;
+  font-weight: 500;
+  background-color: #e7e5e5;
+  padding: 0 0 0 14px;
+  margin-top: 2rem;
+  border-top: 1px solid #cacbcd;
+  border-left: 1px solid #cacbcd;
+  border-right: 1px solid #cacbcd;
+  border-radius: 0.25rem 0.25rem 0.25rem 0;
+}
+
+.table-title p {
+  font-weight: bold;
+}
+
+.navbar a {
+  display: flex;
+  color: #333;
+  padding: 14px;
+  text-decoration: none;
+  border: 0 1px 0 1px solid #ccc;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+}
+
+#active {
+  background-color: #e0321c;
+  color: white;
+
+}
+
+.navbar-title {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: auto;
+  padding: 14px;
+}
+
+.navbar-title a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-title a:hover {
+  background-color: #e0321c;
+}
+
+/* Style für die Tabelle */
+table {
+  table-layout: fixed;
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #cacbcd;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #cacbcd;
+}
+
+th {
+  color: #333;
+}
+
+
+
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Styling für das Popup-Fenster */
+#Componentpopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: none;
+}
+
+#Componentpopup h2 {
+  margin-top: 0;
+}
+
+#Componentpopup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#Componentpopup input[type="text"],
+#Componentpopup textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#Componentpopup input[type="submit"] {
+  background-color: #008CBA;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#Componentpopup input[type="submit"]:hover {
+  background-color: #006F8F;
+}
+
+#Componentpopup button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#Componentpopup button:hover {
+  background-color: #f2f2f2;
+}
+
+#Orderpopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: none;
+}
+
+#Orderpopup h2 {
+  margin-top: 0;
+}
+
+#Orderpopup label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#Orderpopup input[type="text"],
+#Orderpopup textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#Orderpopup input[type="submit"] {
+  background-color: #008CBA;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#Orderpopupinput[type="submit"]:hover {
+  background-color: #006F8F;
+}
+
+#Orderpopup button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#Orderpopup button:hover {
+  background-color: grey;
+}
+
+#addButton {
+  text-align: center;
+  margin: 1rem;
+}
+
+#orderButton {
+  text-align: center;
+  margin: 1rem;
+}
+
+#addOrder {
+  color: #fff;
+  font-weight: 500;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #e0321c;
+}
+
+#addComponent {
+  color: #fff;
+  font-weight: 500;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #e0321c;
+}
